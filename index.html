@@ -167,6 +167,20 @@
   .req div { padding: 16px 18px; border-radius: 16px; background: rgb(10 10 10 / .25); border: 1px solid rgb(255 255 255 / .2); font-size: 14px; color: #fff; }
   .req b { display: block; font: 500 11px var(--mono); letter-spacing: .18em; text-transform: uppercase; opacity: .75; margin-bottom: 4px; }
 
+  .eds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; position: relative; z-index: 1; }
+  .ed { position: relative; display: flex; flex-direction: column; padding: 26px 24px; border-radius: 22px;
+        background: rgb(10 10 10 / .28); border: 1px solid rgb(255 255 255 / .22); color: #fff; }
+  .ed.pick { background: rgb(10 10 10 / .5); border-color: #fff; box-shadow: 0 0 0 1px #fff, 0 20px 60px rgb(0 0 0 / .35); }
+  .ed-tag { position: absolute; top: -12px; left: 24px; padding: 4px 12px; border-radius: 999px; background: #fff; color: var(--jet);
+            font: 600 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+  .ed-name { font: 800 30px/1.1 var(--display); }
+  .ed-for { margin-top: 4px; color: rgb(255 255 255 / .75); font-size: 14px; }
+  .ed ul { list-style: none; padding: 0; margin: 20px 0 24px; display: grid; gap: 10px; flex: 1; }
+  .ed li { font-size: 14px; }
+  .ed li b { display: block; font: 500 10.5px var(--mono); letter-spacing: .18em; text-transform: uppercase; opacity: .7; }
+  .ed .btn { justify-content: center; }
+  .ed-note { align-self: center; color: rgb(255 255 255 / .8); font: 12px var(--mono); letter-spacing: .06em; }
+
   /* faq */
   .faq { display: grid; gap: 12px; margin-top: 40px; }
   details { border: 1px solid var(--line); border-radius: 18px; background: var(--jet-2); padding: 0 24px; }
@@ -192,6 +206,7 @@
     .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
     .demo { grid-template-columns: 1fr; }
     .req { grid-template-columns: 1fr 1fr; }
+    .eds { grid-template-columns: 1fr; }
     .links { display: none; }
     .band { padding: 48px 28px; }
   }
@@ -214,7 +229,7 @@
     <div class="links">
       <a href="#features">Features</a><a href="#demo">Demo</a><a href="#download">Download</a><a href="#faq">FAQ</a>
     </div>
-    <a class="nav-dl dl-link" href="https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Setup-x64.msi">⬇ <span>Download</span></a>
+    <a class="nav-dl" href="#download">⬇ <span>Download</span></a>
   </div>
 </nav>
 
@@ -225,9 +240,9 @@
       <h1><span class="l1">HEY</span><span class="l2">WISPEN</span></h1>
       <p class="tagline">Where your <b>voice</b> meets <b>private intelligence</b>. Search, apps, music, screen and AI, all on your own PC.</p>
       <div class="cta">
-        <a class="dl dl-link" href="https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Setup-x64.msi">
+        <a class="dl" href="#download">
           <span class="circle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg></span>
-          <span class="label">Download for Windows<small>Free · ~150 MB · Windows 10/11 · no account</small></span>
+          <span class="label">Download for Windows<small>Free · Lite, Standard or Max · Windows 10/11 · no account</small></span>
         </a>
       </div>
     </div>
@@ -303,16 +318,46 @@
     <div class="band">
       <div class="kicker" style="color:rgb(255 255 255 / .8)">03 / Get it</div>
       <h2>Say hello to<br>your ghost.</h2>
-      <p>One installer. Python and everything else are bundled. Wispen fetches its speech model and voice on first launch, and works while it does.</p>
-      <div class="row">
-        <a class="btn white dl-link" href="https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Setup-x64.msi">⬇ Download Wispen for Windows</a>
-        <a class="btn line" href="#faq">Questions? Read the FAQ</a>
+      <p>Pick the edition that fits your PC. Same app, same features you can switch on later: it only changes how much memory and disk Wispen uses. Not sure? Take Standard.</p>
+      <div class="eds">
+        <div class="ed">
+          <div class="ed-name">Lite</div>
+          <div class="ed-for">Older or 4 GB laptops</div>
+          <ul>
+            <li><b>RAM</b>4 GB</li>
+            <li><b>Disk</b>~0.5 GB</li>
+            <li><b>Voice</b>Light speech model</li>
+            <li><b>AI</b>Off, questions go to web search</li>
+          </ul>
+          <a class="btn white dl-link" href="https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Lite-Setup-x64.msi">⬇ Download Lite</a>
+        </div>
+        <div class="ed pick">
+          <div class="ed-tag">Most PCs</div>
+          <div class="ed-name">Standard</div>
+          <div class="ed-for">Everyday 8 GB laptops</div>
+          <ul>
+            <li><b>RAM</b>8 GB</li>
+            <li><b>Disk</b>~1 GB, +1.3 GB for AI</li>
+            <li><b>Voice</b>Accurate speech model</li>
+            <li><b>AI</b>Small model, loads only when asked</li>
+          </ul>
+          <a class="btn white dl-link" href="https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Standard-Setup-x64.msi">⬇ Download Standard</a>
+        </div>
+        <div class="ed">
+          <div class="ed-name">Max</div>
+          <div class="ed-for">16 GB + NVIDIA GPU</div>
+          <ul>
+            <li><b>RAM</b>16 GB</li>
+            <li><b>Disk</b>~1.7 GB, +2 GB for AI</li>
+            <li><b>Voice</b>Accurate, on your GPU</li>
+            <li><b>AI</b>Bigger model, always ready</li>
+          </ul>
+          <a class="btn white dl-link" href="https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Max-Setup-x64.msi">⬇ Download Max</a>
+        </div>
       </div>
-      <div class="req">
-        <div><b>OS</b>Windows 10 / 11 (64-bit)</div>
-        <div><b>Memory</b>8 GB RAM, 16 GB with AI</div>
-        <div><b>GPU</b>Optional · NVIDIA = faster</div>
-        <div><b>Disk</b>~1 GB, ~3.5 GB with AI</div>
+      <div class="row">
+        <span class="ed-note">Windows 10 / 11 (64-bit) · Free · ~150 MB download · Switch editions any time in Settings</span>
+        <a class="btn line" href="#faq">Questions? Read the FAQ</a>
       </div>
     </div>
   </div>
@@ -336,7 +381,7 @@
         <pre>ollama pull llama3.2:3b</pre>
         <p>Wispen detects it automatically. Without it everything else still works, and questions go to web search instead.</p></details>
       <details><summary>What gets downloaded on first launch?</summary>
-        <p>The speech model (~500 MB), a natural voice (~60 MB), and only on PCs with an NVIDIA GPU, the GPU speech libraries (~1.2 GB). Wispen is usable the whole time, using the CPU and the Windows voice until they arrive.</p></details>
+        <p>The speech model (~150 MB in Lite, ~500 MB otherwise), a natural voice (~60 MB), and only on PCs with an NVIDIA GPU of 4 GB or more, the GPU speech library (~0.7 GB). Wispen is usable the whole time, using the CPU and the Windows voice until they arrive.</p></details>
     </div>
   </div>
 </section>
