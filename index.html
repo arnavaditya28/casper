@@ -181,6 +181,19 @@
   .ed .btn { justify-content: center; }
   .ed-note { align-self: center; color: rgb(255 255 255 / .8); font: 12px var(--mono); letter-spacing: .06em; }
 
+  /* edition comparison */
+  .cmp-wrap { margin-top: 36px; overflow-x: auto; border: 1px solid var(--line); border-radius: 22px; background: var(--jet-2); }
+  .cmp { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 14.5px; }
+  .cmp th, .cmp td { padding: 14px 18px; text-align: center; border-bottom: 1px solid var(--line); }
+  .cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+  .cmp tbody th { text-align: left; font-weight: 500; color: var(--text); }
+  .cmp thead th { font: 700 15px var(--display); letter-spacing: .02em; color: var(--text); }
+  .cmp thead th.pick { color: var(--rose-hi); }
+  .cmp td { color: var(--muted); }
+  .cmp td.y { color: var(--cerulean-hi); font-weight: 700; font-size: 17px; }
+  .cmp td.n { color: rgb(242 244 248 / .25); }
+  .cmp td:nth-child(3) { background: rgb(255 46 151 / .05); }
+
   /* faq */
   .faq { display: grid; gap: 12px; margin-top: 40px; }
   details { border: 1px solid var(--line); border-radius: 18px; background: var(--jet-2); padding: 0 24px; }
@@ -227,7 +240,7 @@
     <div class="burger" aria-hidden="true"><i></i><i></i><i></i></div>
     <a class="brand" href="#"><img src="assets/casper-icon-256.png" alt="">WISPEN</a>
     <div class="links">
-      <a href="#features">Features</a><a href="#demo">Demo</a><a href="#download">Download</a><a href="#faq">FAQ</a>
+      <a href="#features">Features</a><a href="#download">Download</a><a href="#compare">Compare</a><a href="#faq">FAQ</a>
     </div>
     <a class="nav-dl" href="#download">⬇ <span>Download</span></a>
   </div>
@@ -258,8 +271,8 @@
 
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Search the web</span><span>YouTube kholo</span><span>Close all apps</span><span>Read my screen</span><span>Brief me</span><span>Play chill music</span><span>Quiz me on space</span><span>Coding layout</span><span>Translate to Hindi</span><span>Ghost mode on</span>
-    <span>Search the web</span><span>YouTube kholo</span><span>Close all apps</span><span>Read my screen</span><span>Brief me</span><span>Play chill music</span><span>Quiz me on space</span><span>Coding layout</span><span>Translate to Hindi</span><span>Ghost mode on</span>
+    <span>Search the web</span><span>YouTube kholo</span><span>Close all apps</span><span>Read my screen</span><span>Brief me</span><span>Play chill music</span><span>Quiz me on space</span><span>Coding layout</span><span>Translate to Hindi</span><span>Record this class</span><span>What was I looking at?</span><span>Subtitles on</span><span>Hide everything</span><span>Ghost mode on</span>
+    <span>Search the web</span><span>YouTube kholo</span><span>Close all apps</span><span>Read my screen</span><span>Brief me</span><span>Play chill music</span><span>Quiz me on space</span><span>Coding layout</span><span>Translate to Hindi</span><span>Record this class</span><span>What was I looking at?</span><span>Subtitles on</span><span>Hide everything</span><span>Ghost mode on</span>
   </div>
 </div>
 
@@ -359,6 +372,35 @@
         <span class="ed-note">Windows 10 / 11 (64-bit) · Free · ~150 MB download · Switch editions any time in Settings</span>
         <a class="btn line" href="#faq">Questions? Read the FAQ</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="compare" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">What's inside</div>
+    <h2>Every edition, <span class="c">side by side.</span></h2>
+    <p class="lead">Same app everywhere. Lite skips what needs extra memory, and you can switch editions any time in Settings.</p>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th></th><th>Lite</th><th class="pick">Standard</th><th>Max</th></tr></thead>
+        <tbody>
+            <tr><th>Voice commands in English + Hinglish</th><td>Light model</td><td>Accurate model</td><td>Accurate, on your GPU</td></tr>
+            <tr><th>Private search with “why #1?” ranking</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>Open & close apps, layouts, panic button</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>Hinglish typing in any app</th><td>As said, or Hindi</td><td>+ clean English</td><td>+ clean English</td></tr>
+            <tr><th>Lecture & meeting notes</th><td>Transcript + key points</td><td>+ AI summary, Q&amp;A, quiz</td><td>+ faster on GPU</td></tr>
+            <tr><th>Chat with your files</th><td>Finds the passage</td><td>AI answers</td><td>AI answers, bigger model</td></tr>
+            <tr><th>Voice ID: only obeys your voice</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>Day recap &amp; streaks</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>Desktop ghost</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>“Watch me” macros &amp; shareable routines</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>Voice control for web pages</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><th>Local AI answers</th><td class="n">—</td><td>Small model, loads when asked</td><td>Bigger model, always ready</td></tr>
+            <tr><th>Live subtitles &amp; translation</th><td class="n">—</td><td class="y">✓</td><td>Real-time on GPU</td></tr>
+            <tr><th>Rewind: search what you saw</th><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
