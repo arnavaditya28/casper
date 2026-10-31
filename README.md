@@ -8,7 +8,7 @@
 Say **“Hey Wispen”**: search the web, open apps, play music, read your screen, focus, in English or Hinglish.
 Speech, AI and your data stay on your PC.
 
-### ⬇ Download for Windows: [Lite](https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Lite-Setup-x64.msi) · [Standard](https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Standard-Setup-x64.msi) · [Max](https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Max-Setup-x64.msi) · [Website](https://arnavaditya28.github.io/casper/)
+### ⬇ Download for Windows: [Lite](https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Lite-Setup-x64.exe) · [Standard](https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Standard-Setup-x64.exe) · [Max](https://github.com/arnavaditya28/casper/releases/latest/download/Wispen-Max-Setup-x64.exe) · [Website](https://arnavaditya28.github.io/casper/)
 
 </div>
 
